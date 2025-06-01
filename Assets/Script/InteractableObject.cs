@@ -14,7 +14,7 @@ public class InteractableObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && playerRange) 
+        if (Input.GetButtonDown("Interact") && playerRange && SelectionManager.Intance.OnTarget) 
         {
             Debug.Log("Added into inventory");
             Destroy(gameObject);
