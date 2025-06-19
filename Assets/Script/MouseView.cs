@@ -15,8 +15,15 @@ public class MouseView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+=======
+        if (!InventorySystem.Instance.isOpen && !CraftingSystem.Instance.isOpen)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+>>>>>>> Stashed changes
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
